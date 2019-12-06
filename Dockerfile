@@ -3,8 +3,8 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN python -m venv venv
 RUN venv/bin/pip install -r requirements.txt
-RUN pip install Flask uWSGI
+RUN pip install Flask
 COPY app app
-COPY testz.py boot.sh ./
+COPY testz.py ./
 
 CMD ["python", "testz.py"]
